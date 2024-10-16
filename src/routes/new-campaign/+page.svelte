@@ -61,11 +61,19 @@
     }
   </script>
   
-  <!-- Form Structure -->
+  <!-- Form Structure -->   
+  <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">      
+    <div class="hidden lg:flex lg:gap-x-12">
+      <a href="/" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
+      <a href="/new-campaign" class="text-sm font-semibold leading-6 text-gray-900">New Campaign</a>      
+    </div>  
+  </nav> 
   <div class="container mx-auto py-8">
+    
     <h1 class="text-3xl font-bold mb-4">Create & Send New Campaign</h1>
   
-    <div class="bg-red-500 shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <div class="bg-gray-100 shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      
       <div class="mb-4">
         <label class="block text-gray-700 text-sm font-bold mb-2" for="campaignName">
           Campaign Name
@@ -113,8 +121,14 @@
       </div>
   
       <div class="flex items-center justify-between">
-        <button
+        <!--<button
           class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          on:click|preventDefault={submitForm}
+        >
+          Submit Campaign
+        </button>-->
+        <button
+          class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2  focus-visible:outline-indigo-600 "
           on:click|preventDefault={submitForm}
         >
           Submit Campaign
@@ -126,6 +140,7 @@
       {/if}
     </div>
   </div>
+  
   
   <style>
     .container {

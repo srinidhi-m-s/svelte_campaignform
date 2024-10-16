@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { AnyNode } from "postcss";
+	
 
     let campaignName = '';
     let email = '';
@@ -11,7 +11,7 @@
     };
     let successMessage = '';
   
-    function validateEmail(email) {
+    function validateEmail(email:string) {
       const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return re.test(String(email).toLowerCase());
     }
@@ -65,7 +65,7 @@
   <div class="container mx-auto py-8">
     <h1 class="text-3xl font-bold mb-4">Create & Send New Campaign</h1>
   
-    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <div class="bg-red-500 shadow-md rounded px-8 pt-6 pb-8 mb-4">
       <div class="mb-4">
         <label class="block text-gray-700 text-sm font-bold mb-2" for="campaignName">
           Campaign Name

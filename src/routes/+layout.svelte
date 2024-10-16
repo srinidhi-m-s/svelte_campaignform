@@ -1,5 +1,5 @@
 <script>
-    import '../app.css';  // Adjust the path if necessary
+    import '../app.css'; 
   </script>
 <nav>
 	<a href="/">home</a>

@@ -7,5 +7,5 @@ export async function POST({ request }) {
     return new Response(JSON.stringify({ message: 'Form data received successfully!' }), {
       headers: { 'Content-Type': 'application/json' },
     });
-  }
+}
   
